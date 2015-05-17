@@ -1,0 +1,13 @@
+﻿{
+  "Users": "user1,password1,127.0.0.1;user2,password2,127.0.0.1",
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=.\\MSSQL2014;Database=MyTestDB;Trusted_Connection=True;"
+    }
+  },
+  "EntityFramework": {
+    "BoothDbContext": {
+      "ConnectionStringKey": "Data:DefaultConnection:ConnectionString"
+    }
+  }
+}

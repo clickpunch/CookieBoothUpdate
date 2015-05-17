@@ -1,0 +1,46 @@
+﻿{
+  "webroot": "wwwroot",
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta4", // running on iis
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta4", // running on standalone web server
+    "Kestrel": "1.0.0-beta4", // running on vnext server
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta4", // to load welcome page
+    "Microsoft.ASpNet.Mvc": "6.0.0-beta4", // to load mvc framework
+    "Microsoft.Framework.CodeGenerators.Mvc": "1.0.0-beta4", // IMPORTANT: this is a must have for System.Data.SqlClient
+    "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4", // to load config.json
+    "Serilog": "1.5.5" // to enable logging
+  },
+
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5001"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+      }
+    }
+    /*, //currently Serilog does not support dnxcore50 so we need to comment it out, otherwise it won't work.. 
+    "dnxcore50": {
+      "dependencies": {
+      }
+    }
+      */
+  },
+
+    "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+    "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ]
+}
