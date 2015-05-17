@@ -29,7 +29,7 @@ namespace CookieBoothUpdate
                         .WriteTo.File("c:\\test.txt")  
                         .WriteTo.Console()
                         .CreateLogger();
-            _logger.Information("User name is {username} and age is {age}", "vivek", 34);
+            _logger.Information("Serilog created");
         }
 
 
