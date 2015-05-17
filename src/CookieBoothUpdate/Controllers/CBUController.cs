@@ -121,7 +121,7 @@ namespace CookieBoothUpdate.Controllers
             filterContext.Result = new RedirectResult("/");
 
             // asks for user/pass again - cannot have redirect with this.. 
-            //res.Headers.Append("WWW-Authenticate", string.Format("Basic realm=\"{0}\"", BasicRealm ?? "GirlScouts"));
+            //res.Headers.Append("WWW-Authenticate", string.Format("Basic realm=\"{0}\"", BasicRealm ?? "MyWebSite"));
         }
     }
 }
